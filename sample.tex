@@ -151,24 +151,33 @@
 算法。这是一个算法。这是一个算法。这是一个算法。这是一个算法。这是一个算法。这
 是一个算法。这是一个算法。这是一个算法。这是一个算法。
 
-\begin{shaded*}\begin{alg}{一个复杂算法}
+\begin{alg}{一个复杂算法}
   \label{alg:apb}
-  \begin{algorithmic}
-    \Input Two numbers $a$ and $b$
-    \Output The sum of $a$ and $b$
-    \Procedure{A-Plus-B}{$a, b$}
-      \If $a = 0$
-        \State \Return $b$
-      \EndIf
-      \State $res \gets 0$
-      \While{$b \neq 0$}
-        \State Increase $res$ by $1$
-        \State $b \gets b - 1$
-      \EndWhile
-      \State \Return $res$
-    \EndProcedure
-  \end{algorithmic}
-\end{alg}\end{shaded*}
+    \begin{algorithm}
+        \counterwithin{algorithm}{section}
+            \caption{FPS Algorithms}
+            \hspace*{0.02in} {\bf Input:} %算法的输入， \hspace*{0.02in}用来控制位置，同时利用 \\ 进行换行
+                Pint set $P$, number of iterations $n$.\\
+            \hspace*{0.02in} {\bf Output:} %算法的结果输出
+                output result
+    	\begin{algorithmic}
+    		\State Initialize new point set $P'$
+    		\State $p_0 \leftarrow$ Random picked initial point from $P$.
+    		\State Insert $p_0$ into $P'$.
+    		\For{$i = 1,...,n$}
+    		\State $p_i \leftarrow$ NULL, $d_i \leftarrow$ 0.
+    		\For{$p_j$ in $P$}
+    		\State $d_j$ = min $\left\|p_j - P'\right\|_2\ \leftarrow$ Distance from point $p_j$ to point set $P'$.
+    		\If{$d_j > d_i$}
+    		\State $p_i \leftarrow p_j$, $d_i \leftarrow d_j$.
+    	    \EndIf
+    	    \EndFor
+    	    \State Insert $p_i$ into $P'$.
+    	    \EndFor
+    		\State \Return result
+    	\end{algorithmic}
+    \end{algorithm}
+\end{alg}
 
 \begin{thm} \label{thm:gsb-apprx}
   \ralg{apb}所示的算法是正确的。
