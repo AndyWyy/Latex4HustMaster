@@ -20,20 +20,22 @@
 \usepackage{tikz}
 \usepackage{tikzscale}
 \usepackage{pgfplots}
+\usepackage{setspace}
+
 
 \pgfplotsset{compat=1.16}
 
 \newcommand{\cfig}[3]{
   \begin{figure}[htb]
     \centering
-    \includegraphics[width=#2\textwidth]{images/#1.tikz}
+    \includegraphics[width=#2\textwidth]{images/#1}
     \caption{#3}
     \label{fig:#1}
   \end{figure}
 }
 \newcommand{\sfig}[3]{
   \begin{subfigure}[b]{#2\textwidth}
-    \includegraphics[width=\textwidth]{images/#1.tikz}
+    \includegraphics[width=\textwidth]{images/#1}
     \caption{#3}
     \label{fig:#1}
   \end{subfigure}
@@ -160,22 +162,24 @@
                 Pint set $P$, number of iterations $n$.\\
             \hspace*{0.02in} {\bf Output:} %算法的结果输出
                 output result
-    	\begin{algorithmic}
-    		\State Initialize new point set $P'$
-    		\State $p_0 \leftarrow$ Random picked initial point from $P$.
-    		\State Insert $p_0$ into $P'$.
-    		\For{$i = 1,...,n$}
-    		\State $p_i \leftarrow$ NULL, $d_i \leftarrow$ 0.
-    		\For{$p_j$ in $P$}
-    		\State $d_j$ = min $\left\|p_j - P'\right\|_2\ \leftarrow$ Distance from point $p_j$ to point set $P'$.
-    		\If{$d_j > d_i$}
-    		\State $p_i \leftarrow p_j$, $d_i \leftarrow d_j$.
-    	    \EndIf
-    	    \EndFor
-    	    \State Insert $p_i$ into $P'$.
-    	    \EndFor
-    		\State \Return result
-    	\end{algorithmic}
+            \begin{spacing}{1.0}
+        	\begin{algorithmic}
+        		\State Initialize new point set $P'$
+        		\State $p_0 \leftarrow$ Random picked initial point from $P$.
+        		\State Insert $p_0$ into $P'$.
+        		\For{$i = 1,...,n$}
+        		\State $p_i \leftarrow$ NULL, $d_i \leftarrow$ 0.
+        		\For{$p_j$ in $P$}
+        		\State $d_j$ = min $\left\|p_j - P'\right\|_2\ \leftarrow$ Distance from point $p_j$ to point set $P'$.
+        		\If{$d_j > d_i$}
+        		\State $p_i \leftarrow p_j$, $d_i \leftarrow d_j$.
+        	    \EndIf
+        	    \EndFor
+        	    \State Insert $p_i$ into $P'$.
+        	    \EndFor
+        		\State \Return result
+        	\end{algorithmic}
+                \end{spacing}
     \end{algorithm}
 \end{alg}
 
@@ -219,14 +223,14 @@
 堆表。这是一堆表。这是一堆表。这是一堆表。这是一堆表。这是一堆表。这是一堆表。
 这是一堆图。这是一堆图。这是一堆图。
 
-\cfig{bpg-1}{0.8}{一张大图}
+\cfig{bpg-1.tikz}{0.8}{一张大图}
 
-\xfig{bpg-l}{两张小图}{
-  \sfig{bpg-la}{0.3}{小图}
-  \sfig{bpg-lb}{0.3}{小图}
+\xfig{bpg-l.tikz}{两张小图}{
+  \sfig{bpg-la.tikz}{0.3}{小图}
+  \sfig{bpg-lb.tikz}{0.3}{小图}
 }
 
-\rfig{bpg-1}很好看，\rfig{bpg-la}和\rfig{bpg-lb}因为缩得太小了不那么好看。
+\rfig{bpg-1.tikz}很好看，\rfig{bpg-la.tikz}和\rfig{bpg-lb.tikz}因为缩得太小了不那么好看。
 
 我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字
 。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是

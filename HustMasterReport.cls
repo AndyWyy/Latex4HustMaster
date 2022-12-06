@@ -11,9 +11,9 @@
 
 %	---	定义的新的类
 \def\HGP@name{HustMasterReport}
-\def\HGP@date{2018/03/19}
-\def\HGP@version{v2.1.7}
-\def\HGP@introduction{Adapt HUST style to article}
+\def\HGP@date{2022/12/06}
+\def\HGP@version{v1.0.0}
+\def\HGP@introduction{Adapt HUST style to report}
 \ProvidesClass{\HGP@name}[\HGP@date~\HGP@version~\HGP@introduction]
 \NeedsTeXFormat{LaTeX2e}
 
