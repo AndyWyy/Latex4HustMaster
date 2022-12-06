@@ -6,7 +6,6 @@ PS(有很多东西还没改)
 
 以下是HUST-CS-Thesis原始README：
 
-# HUST-CS-Thesis
 该模板基于华中科技大学2022春本科毕业设计公文包（计算机学院）
 - 小修了一下，可以在overleaf上正常使用，设置Compiler=XeLaTex, TeX Live version=2021
 - 添加“附录：大学期间发表或提交的论文”
