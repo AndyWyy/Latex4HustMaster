@@ -1,7 +1,9 @@
 # Latex4HustMaster
+
 该模板基于HUST-CS-Thesis修改
 可以在Overleaf上正常使用
 PS(有很多东西还没改)
+
 ---
 
 以下是HUST-CS-Thesis原始README：
